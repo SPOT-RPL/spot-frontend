@@ -55,8 +55,9 @@ export function Kalender(){
     const timeString=`${String(currentHours).padStart(2, "0")}:${String(currentMinutes).padStart(2, "0")}`;
     const isWithinHours = currentHours >= startHour && currentHours <= 18;
     const timeTopPosition = headerHeight + (currentHours - startHour + currentMinutes / 60) * rowHeight;
-    const days=["Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
-    const todayDay=days[new Date().getDay()]
+    const days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+    const fullWeek=["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
+    const todayDay = fullWeek[now.getDay()];
 
         return (
         <div className="relative w-full max-h-[80vh] overflow-y-auto border border-[#E5E7EB] rounded-xl bg-white shadow-xs">
@@ -74,7 +75,7 @@ export function Kalender(){
                 {days.map((day) => {
                         const isToday=day===todayDay
                             return(
-                                <div key={day} className={`sticky top-0 z-10 flex flex-col gap-4 border-r border-b last:border-r-0 border-[#F3F4F6] ${isToday? "bg-[#3B82F6]/30 text-[#2563EB]":"bg-white text-[#4B5563]"}`}>
+                                <div key={day} className={`sticky top-0 z-10 flex flex-col gap-4 border-r border-b last:border-r-0 border-[#F3F4F6] ${isToday? "bg-[#3B82F6]/15 text-[#2563EB]":"bg-white text-[#4B5563]"}`}>
                                     <div className="text-center font-medium text-sm  py-4">{day}</div>
                                 </div>
                             )
@@ -88,8 +89,9 @@ export function Kalender(){
                         </div>
                         {days.map((day) => {
                             const scheduleToday=DUMMY_JADWAL.find((item)=> item.day===day && item.startTime.slice(0,2)===hour.slice(0,2))
+                            const isToday=day===todayDay
                                 return(
-                                    <div key={`${day}-${hour}`} className="min-h-[100px] border-r border-b last:border-r-0 border-[#E5E7EB] justify-center flex flex-col gap-3 p-6">
+                                    <div key={`${day}-${hour}`} className={`min-h-[100px] border-r border-b last:border-r-0 border-[#E5E7EB] justify-center flex flex-col gap-3 p-6 ${isToday?"bg-[#3B82F6]/10":"bg-white"}`}>
                                         {scheduleToday &&(
                                             <div className="flex flex-col gap-2 bg-white rounded-xl p-4 border border-[#E5E7EB] shadow-sm hover:shadow-md transition ">
                                                 <h3 className="font-bold text-sm text-[#1F2937] ">{scheduleToday.title}</h3>
