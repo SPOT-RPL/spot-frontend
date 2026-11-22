@@ -10,6 +10,7 @@ import Dosen from "@/pages/Dosen.tsx";
 import MataKuliah from "@/pages/MataKuliah.tsx";
 import JadwalTugas from "@/pages/JadwalTugas.tsx";
 import TugasBesar from "@/pages/TugasBesar.tsx";
+import JadwalKuliah from "@/pages/JadwalKuliah.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
                 path:"MataKuliah",
                 element:<MataKuliah/>
               },
+          {
+            path:"JadwalKuliah",
+            element:<JadwalKuliah/>
+          },
               {
                 path:"TugasBesar",
                 children:[
