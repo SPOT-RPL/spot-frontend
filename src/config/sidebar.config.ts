@@ -94,7 +94,7 @@ class MahasiswaSidebar implements ISidebarConfig {
               icon: CalendarClock,
             },
             {
-              label: "MataKuliah",
+              label: "Mata Kuliah",
               path: "/mahasiswa/MataKuliah",
               icon: BookBookmark,
             },

@@ -4,6 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
+import Admin from "./pages/Admin.tsx";
+import Mahasiswa from "@/pages/Mahasiswa.tsx";
+import Dosen from "@/pages/Dosen.tsx";
+import MataKuliah from "@/pages/MataKuliah.tsx";
+import JadwalTugas from "@/pages/JadwalTugas.tsx";
+import TugasBesar from "@/pages/TugasBesar.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,9 +20,39 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/tes",
-        element: <div>About Page</div>,
+        path: "/admin",
+        element: <Admin />,
       },
+      {
+        path: "/mahasiswa",
+        children:[
+              {
+                index:true,
+                element:<Mahasiswa/>
+              },
+              {
+                path:"MataKuliah",
+                element:<MataKuliah/>
+              },
+              {
+                path:"TugasBesar",
+                children:[
+                  {
+                    index:true,
+                    element:<TugasBesar/>
+                  },
+                  {
+                    path:"Jadwal",
+                    element:<JadwalTugas/>
+                  }
+                ]
+              }
+            ]
+      },
+      {
+        path: "/dosen",
+        element: <Dosen/>,
+      }
     ],
   },
 ]);
