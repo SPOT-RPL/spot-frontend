@@ -22,7 +22,7 @@ export function Card({
         {/* Card */}
         <Card variant={variant} padding="sm" className={className} {...props}>
           {/* Card Content */}
-          <CardContent variant="outline">
+          <CardContent variant="default">
             {/* Card Content - Header */}
             <div className="flex justify-between items-center w-full">
               <span className="text-xs font-bold tracking-[0.14em] uppercase text-[#545454]">
@@ -219,7 +219,7 @@ export function CardAction({
 }
 
 export interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: "default" | "outline";
+  variant?: "default" | "none";
 }
 
 export function CardContent({
@@ -232,7 +232,7 @@ export function CardContent({
     <div
       className={cn(
         "w-full flex-1",
-        variant === "outline" &&
+        variant === "default" &&
           "bg-white rounded-[14px] p-4.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.02)] border border-transparent",
         className,
       )}
