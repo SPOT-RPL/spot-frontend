@@ -7,7 +7,7 @@ import {
   UserRoundPen,
   type LucideIcon,
 } from "lucide-react";
-import React, { useMemo, type ActivityProps } from "react";
+import { useMemo } from "react";
 import { getCard } from "@/config/cardStat.config.ts";
 import Card from "@/components/card/Card";
 import {
@@ -118,7 +118,7 @@ export default function Admin() {
   const cardConfig = useMemo(() => getCard(role), [role]);
 
   return (
-    <main className="px-8 py-12 w-full flex flex-col gap-6">
+    <div className="px-8 py-12 w-full flex flex-col gap-6">
       <header className="flex items-center justify-between w-full">
         <div className="flex flex-col gap-1">
           <h1 className="text-3xl font-bold">Dashboard</h1>
@@ -246,6 +246,6 @@ export default function Admin() {
           </Card>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
