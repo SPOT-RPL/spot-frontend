@@ -1,4 +1,3 @@
-import { LoaderCircle } from "lucide-react"
 import {useEffect, useState, Fragment} from "react";
 import type { CardJadwal } from "@/types/cardJadwal.types.ts";
 
