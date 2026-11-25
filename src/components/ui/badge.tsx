@@ -21,6 +21,7 @@ const badgeVariants = cva(
         blue: "bg-blue-200 text-blue-800",
         yellow: "bg-yellow-200 text-yellow-800",
         green: "bg-green-200 text-green-800",
+        red: "bg-red-200 text-red-800",
       },
     },
     defaultVariants: {
@@ -29,12 +30,17 @@ const badgeVariants = cva(
   },
 );
 
+type BadgeProps = useRender.ComponentProps<"span"> &
+  VariantProps<typeof badgeVariants>;
+
+type BadgeVariant = NonNullable<VariantProps<typeof badgeVariants>["variant"]>;
+
 function Badge({
   className,
   variant = "default",
   render,
   ...props
-}: useRender.ComponentProps<"span"> & VariantProps<typeof badgeVariants>) {
+}: BadgeProps) {
   return useRender({
     defaultTagName: "span",
     props: mergeProps<"span">(
@@ -52,3 +58,4 @@ function Badge({
 }
 
 export { Badge, badgeVariants };
+export type { BadgeProps, BadgeVariant };
