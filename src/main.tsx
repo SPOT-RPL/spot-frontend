@@ -11,14 +11,19 @@ import MataKuliah from "@/pages/MataKuliah.tsx";
 import JadwalTugas from "@/pages/JadwalTugas.tsx";
 import TugasBesar from "@/pages/TugasBesar.tsx";
 import JadwalKuliah from "@/pages/JadwalKuliah.tsx";
+import LoginPage from "./pages/Login.tsx";
 
 const router = createBrowserRouter([
   {
-    element: <MainLayout />,
+    // element: <MainLayout />,
     children: [
       {
         path: "/",
         element: <App />,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
       },
       {
         path: "/admin",
