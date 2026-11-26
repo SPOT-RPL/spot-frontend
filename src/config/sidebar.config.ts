@@ -30,12 +30,12 @@ class AdminSidebar implements ISidebarConfig {
             },
             {
               label: "Manajemen Mahasiswa",
-              path: "/admin/ManajemenMahasiswa",
+              path: "/admin/manajemen-mahasiswa",
               icon: GraduationCap,
             },
             {
               label: "Manajemen Dosen",
-              path: "/admin/ManajemenDosen",
+              path: "/admin/manajemen-dosen",
               icon: Users,
             },
             {
