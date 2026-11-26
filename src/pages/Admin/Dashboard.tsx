@@ -236,7 +236,7 @@ export default function Admin() {
                         <div>{jadwal.time}</div>
                       </TableCell>
                       <TableCell>
-                        <Badge variant={jadwal.status}>{jadwal.status}</Badge>
+                        <Badge variant="blue">{jadwal.status}</Badge>
                       </TableCell>
                     </TableRow>
                   ))}
