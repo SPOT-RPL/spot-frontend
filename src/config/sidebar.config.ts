@@ -40,7 +40,7 @@ class AdminSidebar implements ISidebarConfig {
             },
             {
               label: "Tugas Besar",
-              path: "/admin/TugasBesar",
+              path: "/admin/manajemen-tubes",
               icon: BookOpenText,
             },
             {

@@ -16,6 +16,7 @@ import JadwalKuliah from "@/pages/JadwalKuliah.tsx";
 import ManajemenMahasiswa from "@/pages/Admin/ManajemenMahasiswa.tsx";
 import ManajemenDosen from "@/pages/Admin/ManajemenDosen.tsx";
 import LoginPage from "./pages/Login.tsx";
+import ManajamenTubes from "@/pages/Admin/ManajemenTubes.tsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
           {
             path: "manajemen-dosen",
             element: <ManajemenDosen />
+          },
+          {
+            path: "manajemen-tubes",
+            element: <ManajamenTubes />
           }
         ]
       },

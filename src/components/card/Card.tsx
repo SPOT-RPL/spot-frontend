@@ -233,7 +233,7 @@ export function CardContent({
       className={cn(
         "w-full flex-1",
         variant === "default" &&
-          "bg-white rounded-[14px] p-4.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.02)] border border-transparent",
+          "bg-white rounded-[14px] flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.02)] border border-transparent",
         className,
       )}
       {...props}
