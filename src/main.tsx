@@ -8,7 +8,7 @@ import MainLayout from "@/layouts/MainLayout.tsx";
 
 import AdminDashboard from "@/pages/Admin/Dashboard.tsx";
 import Mahasiswa from "@/pages/Mahasiswa.tsx";
-import Dosen from "@/pages/Dosen.tsx";
+import Dosen from "@/pages/Dosen/Dosen.tsx";
 import MataKuliah from "@/pages/MataKuliah.tsx";
 import JadwalTugas from "@/pages/JadwalTugas.tsx";
 import TugasBesar from "@/pages/TugasBesar.tsx";
