@@ -15,8 +15,13 @@ import TugasBesar from "@/pages/TugasBesar.tsx";
 import JadwalKuliah from "@/pages/JadwalKuliah.tsx";
 import ManajemenMahasiswa from "@/pages/Admin/ManajemenMahasiswa.tsx";
 import ManajemenDosen from "@/pages/Admin/ManajemenDosen.tsx";
+import LoginPage from "./pages/Login.tsx";
 
 const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
   {
     element: <MainLayout />,
     children: [
