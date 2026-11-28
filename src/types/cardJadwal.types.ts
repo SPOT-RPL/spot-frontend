@@ -2,8 +2,8 @@ export type hariKuliah="Senin"|"Selasa"|"Rabu"|"Kamis"|"Jumat";
 export interface CardJadwal {
     title: string;
     participant: string;
-    startTime:String;
-    endTime:String;
+    startTime:string;
+    endTime:string;
     day:hariKuliah;
     room?: string;
 }

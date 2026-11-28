@@ -5,12 +5,14 @@ import "./index.css";
 import App from "./App.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
 import Admin from "./pages/Admin.tsx";
-import Mahasiswa from "@/pages/Mahasiswa.tsx";
+import Mahasiswa from "@/pages/mahasiswa/Mahasiswa.tsx";
 import Dosen from "@/pages/Dosen.tsx";
-import MataKuliah from "@/pages/MataKuliah.tsx";
-import JadwalTugas from "@/pages/JadwalTugas.tsx";
-import TugasBesar from "@/pages/TugasBesar.tsx";
-import JadwalKuliah from "@/pages/JadwalKuliah.tsx";
+import MataKuliah from "@/pages/mahasiswa/MataKuliah.tsx";
+import JadwalTugas from "@/pages/mahasiswa/JadwalTugas.tsx";
+import TugasBesar from "@/pages/mahasiswa/TugasBesar.tsx";
+import JadwalKuliah from "@/pages/mahasiswa/JadwalKuliah.tsx";
+import JadwalUjian from "@/pages/mahasiswa/JadwalUjian.tsx";
+import DetailTugasBesar from "@/pages/mahasiswa/TugasBesar/DetailTugasBesar.tsx";
 
 const router = createBrowserRouter([
   {
@@ -39,12 +41,20 @@ const router = createBrowserRouter([
             path:"JadwalKuliah",
             element:<JadwalKuliah/>
           },
+          {
+            path:"JadwalUjian",
+            element:<JadwalUjian/>
+          },
               {
                 path:"TugasBesar",
                 children:[
                   {
                     index:true,
                     element:<TugasBesar/>
+                  },
+                  {
+                    path:":projectId",
+                    element:<DetailTugasBesar/>
                   },
                   {
                     path:"Jadwal",
